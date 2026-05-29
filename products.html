@@ -2,53 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Orygin Harvest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Our Products</h1>
-
+    <h1>Orygin Harvest</h1>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="products.html">Products</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 </header>
 
 <main>
-    <h2>Fruit Packages</h2>
-    <article>
-            <h3>Premium healthy fruits</h3>
-            <img src="img/theduo.jpg" alt="Premium" width="300">
-            <p>Perfect for families.</p>
-        </article>
 
-    <h3>The duo - R289.99</h3>
-    <p>Includes apples, bananas, and oranges.</p>
-    <article>
-            <h3>Premium healthy fruits</h3>
-            <img src="img/thegathering.jpg" alt="Premium" width="300">
-            <p>Perfect for families.</p>
-        </article>
+    <div class="page-banner">
+        <h2>Our Weekly Fruit Packages</h2>
+        <p>Every box is handpicked, beautifully arranged, and delivered fresh to your door each week. Choose the package that suits your household — or build your own.</p>
+    </div>
 
-    <h3>The Gathering - R459.99</h3>
-    <p>Includes a variety of fruits for the whole family.</p>
-    <article>
-            <h3>Premium healthy fruits</h3>
-            <img src="img/theharvest.jpg" alt="Premium" width="300">
-            <p>Perfect for families.</p>
-        </article>
+    <section>
+        <div class="products-grid">
 
-    <h3>The Harvest - R689.99</h3>
-    <p>Includes exotic and seasonal fruits.</p>
+            <!-- THE DUO -->
+            <article class="card">
+                <img src="img/theduo.jpg" alt="The Duo — a premium weekly fruit box for individuals and couples">
+                <div class="card-body">
+                    <span class="product-badge">Starter</span>
+                    <h3>The Duo</h3>
+                    <p>Refined simplicity for individuals and couples. Each weekly delivery includes a minimum of five different, carefully selected fruits — ensuring variety, balance, and the kind of freshness that makes healthy eating feel effortless.</p>
+                    <p style="font-size: 0.85rem; color: var(--green); font-weight: 600; margin-top: 0.5rem;">✦ Minimum 5 different fruits per delivery</p>
+                    <p style="font-size: 0.85rem; color: var(--green); font-weight: 600;">✦ Delivered fresh every week</p>
+                    <p class="card-price">R289.99 / week</p>
+                    <a href="enquiry.html" class="btn-primary">Order Now</a>
+                </div>
+            </article>
+
+            <!-- THE GATHERING -->
+            <article class="card">
+                <img src="img/thegathering.jpg" alt="The Gathering — a generous weekly family fruit box">
+                <div class="card-body">
+                    <span class="product-badge">Most Popular</span>
+                    <h3>The Gathering</h3>
+                    <p>Our most loved family box. Generous, vibrant, and full of variety — The Gathering is curated for households that believe fresh fruit should always be within reach. Each weekly delivery features a minimum of six different fruits, keeping every day interesting and nourishing.</p>
+                    <p style="font-size: 0.85rem; color: var(--green); font-weight: 600; margin-top: 0.5rem;">✦ Minimum 6 different fruits per delivery</p>
+                    <p style="font-size: 0.85rem; color: var(--green); font-weight: 600;">✦ Perfect for families of 3 or more</p>
+                    <p style="font-size: 0.85rem; color: var(--green); font-weight: 600;">✦ Delivered fresh every week</p>
+                    <p class="card-price">R459.99 / week</p>
+                    <a href="enquiry.html" class="btn-primary">Order Now</a>
+                </div>
+            </article>
+
+            <!-- THE HARVEST -->
+            <article class="card">
+                <img src="img/theharvest.jpg" alt="The Harvest — premium exotic and seasonal weekly fruit box">
+                <div class="card-body">
+                    <span class="product-badge">Premium</span>
+                    <h3>The Harvest</h3>
+                    <p>For those who refuse to settle. The Harvest is our most indulgent offering — a weekly collection of rare, exotic, and seasonal fruits that most people never have the privilege of experiencing. A minimum of six exceptional varieties, curated to surprise and delight.</p>
+                    <p style="font-size: 0.85rem; color: var(--green); font-weight: 600; margin-top: 0.5rem;">✦ Minimum 6 premium varieties per delivery</p>
+                    <p style="font-size: 0.85rem; color: var(--green); font-weight: 600;">✦ Seasonal and rare selections</p>
+                    <p style="font-size: 0.85rem; color: var(--green); font-weight: 600;">✦ Delivered fresh every week</p>
+                    <p class="card-price">R689.99 / week</p>
+                    <a href="enquiry.html" class="btn-primary">Order Now</a>
+                </div>
+            </article>
+
+            <!-- THE EXOTIC BOX -->
+            <article class="card">
+                <img src="img/theharvest.jpg" alt="The Exotic Box — rare and extraordinary fruits delivered weekly">
+                <div class="card-body">
+                    <span class="product-badge" style="background-color: var(--orange);">Exclusive</span>
+                    <h3>The Exotic Box</h3>
+                    <p>An extraordinary weekly experience reserved for the truly discerning. The Exotic Box features the rarest, most sought-after fruits from across the globe — dragon fruit, rambutan, passion fruit, lychee, starfruit, and more. Each delivery is unique, seasonal, and utterly extraordinary. Pricing is tailored to the selection.</p>
+                    <p style="font-size: 0.85rem; color: var(--orange); font-weight: 600; margin-top: 0.5rem;">✦ Rare & globally sourced fruits</p>
+                    <p style="font-size: 0.85rem; color: var(--orange); font-weight: 600;">✦ Unique selection every week</p>
+                    <p style="font-size: 0.85rem; color: var(--orange); font-weight: 600;">✦ Limited availability</p>
+                    <p class="card-price">Price on Request</p>
+                    <a href="enquiry.html" class="btn-primary">Request a Quote</a>
+                </div>
+            </article>
+
+            <!-- THE CUSTOM BOX -->
+            <article class="card">
+                <img src="img/featureone.jpg" alt="The Custom Box — build your own weekly fruit selection">
+                <div class="card-body">
+                    <span class="product-badge" style="background-color: var(--orange);">Build Your Own</span>
+                    <h3>The Custom Box</h3>
+                    <p>Because nobody knows your preferences better than you do. The Custom Box puts the curation in your hands — choose any six fruits from our available selection and we will deliver your perfect combination fresh to your door every week. Your box, your rules, your ritual.</p>
+                    <p style="font-size: 0.85rem; color: var(--orange); font-weight: 600; margin-top: 0.5rem;">✦ Choose your own 6 fruits</p>
+                    <p style="font-size: 0.85rem; color: var(--orange); font-weight: 600;">✦ Fully personalised weekly delivery</p>
+                    <p style="font-size: 0.85rem; color: var(--orange); font-weight: 600;">✦ Update your selection anytime</p>
+                    <p class="card-price">Price on Request</p>
+                    <a href="enquiry.html" class="btn-primary">Request a Quote</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- REASSURANCE SECTION -->
+    <section style="background-color: var(--beige); border-radius: 16px; padding: 2.5rem; margin-top: 2rem; text-align: center;">
+        <h2 style="margin-bottom: 1rem;">Every Box. Every Week. No Exceptions.</h2>
+        <p style="max-width: 60ch; margin: 0 auto; text-align: center;">Each Orygin Harvest delivery is prepared with the same level of care and attention, every single week. Whether you are a first-time customer or have been with us from the beginning, your standard never drops — because ours never does.</p>
+        <div class="cta-buttons" style="justify-content: center; margin-top: 1.5rem;">
+            <a href="enquiry.html" class="btn-primary">Start Your Weekly Delivery</a>
+        </div>
+    </section>
+
 </main>
 
 <footer>
-    <p>&copy; 2026 Orygin Harvest</p>
+    <p>&copy; 2026 Orygin Harvest. All rights reserved.</p>
 </footer>
 
 </body>

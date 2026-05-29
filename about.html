@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Orygin Harvest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-    <h1>About Orygin Harvest</h1>
-
+    <h1>Orygin Harvest</h1>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.html" class="active">About</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="enquiry.html">Enquiry</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -23,26 +31,74 @@
 
 <main>
 
-    <section>
+    <div class="page-banner">
         <h2>Our Story</h2>
-        <p>Orygin Harvest was created with a simple purpose: to make fresh, high-quality fruit more accessible and convenient for everyday life. In today’s busy world, many families struggle to find time to shop for fresh produce and make healthy choices. Orygin Harvest was designed to solve this by delivering carefully selected fruit boxes directly to your door. Each delivery is prepared with care, ensuring freshness, quality, and a sense of ease for every household..</p>
-        <img src="img/delivering.jpg" alt="Fruit business" width="500">
+        <p>Born from a belief that fresh, exceptional fruit should be effortlessly accessible to every household.</p>
+    </div>
+
+    <section class="about-intro">
+        <img src="img/delivering.jpg" alt="Orygin Harvest fresh fruit delivery">
+        <div class="text-block">
+            <h2>Where It All Began</h2>
+            <p>Orygin Harvest was founded with one clear observation: in a world that demands more of our time than ever before, the simple act of sourcing fresh, high-quality fruit had become a luxury many families simply could not afford — not in cost, but in time.</p>
+            <p>We built Orygin Harvest to change that. Every week, we source, handpick, and deliver carefully curated fruit boxes directly to your door. No queues. No compromises. No settling for fruit that sat in a warehouse for three weeks before reaching a shelf.</p>
+            <p>From our very first delivery, we made a promise: every box that leaves our hands will be something we would be proud to put on our own tables. That promise has not changed, and it never will.</p>
+        </div>
     </section>
 
     <section>
-        <h2>Mission</h2>
-        <p>Our mission is to provide families, offices, and individuals with fresh and premium-quality fruit in a way that is simple, reliable, and stress-free. We aim to remove the hassle of shopping while ensuring that every customer receives fruit that is carefully selected, beautifully presented, and delivered with consistency and care..</p>
+        <h2 class="section-title">What Drives Us</h2>
+        <div class="values-grid">
+
+            <div class="value-card">
+                <h3>Our Mission</h3>
+                <p>To make premium, fresh fruit effortlessly accessible to every household — delivered weekly with consistency, care, and an unwavering commitment to quality that our customers can always count on.</p>
+            </div>
+
+            <div class="value-card">
+                <h3>Our Vision</h3>
+                <p>To become the most trusted name in fruit delivery across South Africa — a brand synonymous with freshness, reliability, and the kind of quality that quietly elevates everyday life.</p>
+            </div>
+
+            <div class="value-card">
+                <h3>Our Standard</h3>
+                <p>We do not compromise. Every fruit is assessed for ripeness, colour, and condition before it earns a place in your box. If it does not meet our standard, it does not reach your door.</p>
+            </div>
+
+            <div class="value-card">
+                <h3>Our Promise</h3>
+                <p>Consistent weekly delivery. Exceptional quality. A seamless experience from the moment you place your order to the moment your box arrives at your door — every single week.</p>
+            </div>
+
+        </div>
     </section>
 
     <section>
-        <h2>Vision</h2>
-        <p>Our vision is to become a trusted and recognised premium fruit delivery service known for quality, reliability, and customer satisfaction. We aim to promote healthier lifestyles by making fresh fruit a convenient and enjoyable part of everyday living, while building long-term trust with every customer we serve..</p>
+        <h2 class="section-title">Who We Serve</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Busy Families</h3>
+                <p>Parents who want their children eating fresh, nutritious fruit every day without having to factor a supermarket run into an already demanding schedule.</p>
+            </div>
+            <div class="value-card">
+                <h3>Health-Conscious Individuals</h3>
+                <p>People who are intentional about what they put into their bodies and who refuse to compromise on the quality of their produce.</p>
+            </div>
+            <div class="value-card">
+                <h3>Professionals</h3>
+                <p>Those whose time is simply too valuable to spend navigating supermarket aisles — and who appreciate the ease of having premium fruit arrive at their door.</p>
+            </div>
+            <div class="value-card">
+                <h3>Anyone Who Values Quality</h3>
+                <p>Because exceptional fruit is not a luxury — it is a standard. And we believe everyone deserves to experience it, effortlessly, every week.</p>
+            </div>
+        </div>
     </section>
 
 </main>
 
 <footer>
-    <p>&copy; 2026 Orygin Harvest</p>
+    <p>&copy; 2026 Orygin Harvest. All rights reserved.</p>
 </footer>
 
 </body>

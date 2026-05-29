@@ -2,50 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Orygin Harvest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Contact Us</h1>
-
+    <h1>Orygin Harvest</h1>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="products.html">Products</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
     </nav>
 </header>
 
 <main>
-    <h2>Contact Details</h2>
-    <p>Email: info@oryginharvest.co.za</p>
-    <p>Phone: 012 345 6789</p>
 
-    <h2>Locations</h2>
-    <p>Cape Town</p>
-    <p>Johannesburg</p>
+    <div class="page-banner">
+        <h2>Get In Touch</h2>
+        <p>We are always happy to hear from you. Reach out and a member of our team will respond promptly.</p>
+    </div>
 
-    <h2>Send a Message</h2>
+    <div class="contact-layout">
 
-    <form>
-        <label>Name:</label><br>
-        <input type="text" required><br><br>
+        <aside class="contact-info">
+            <h2>Contact Details</h2>
 
-        <label>Email:</label><br>
-        <input type="email" required><br><br>
+            <div class="contact-detail">
+                <strong>Email</strong>
+                <p>info@oryginharvest.co.za</p>
+            </div>
 
-        <label>Message:</label><br>
-        <textarea required></textarea><br><br>
+            <div class="contact-detail">
+                <strong>Phone</strong>
+                <p>012 345 6789</p>
+            </div>
 
-        <button type="submit">Send</button>
-    </form>
+            <div class="contact-detail">
+                <strong>Operating Hours</strong>
+                <p>Monday to Friday: 8:00am — 5:00pm</p>
+                <p>Saturday: 9:00am — 1:00pm</p>
+            </div>
+
+            <div class="contact-detail">
+                <strong>Delivery Areas</strong>
+                <div style="margin-top: 0.5rem;">
+                    <span class="location-badge">Cape Town</span>
+                    <span class="location-badge">Johannesburg</span>
+                </div>
+            </div>
+
+            <div class="contact-detail">
+                <strong>Follow Us</strong>
+                <p>@oryginharvest on Instagram &amp; Facebook</p>
+                <p style="font-size: 0.85rem; margin-top: 0.3rem;">Follow along for weekly highlights, seasonal specials, and behind-the-scenes fruit curation.</p>
+            </div>
+        </aside>
+
+        <div>
+            <h2>Send a Message</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-mid);">Whether you have a question about our packages, need help choosing the right box, or simply want to say hello — we would love to hear from you.</p>
+
+            <form action="mailto:info@oryginharvest.co.za" method="post" enctype="text/plain">
+
+                <div class="form-group">
+                    <label for="contact-name">Full Name</label>
+                    <input type="text" id="contact-name" name="name" placeholder="e.g. Grace Pakuda" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-email">Email Address</label>
+                    <input type="email" id="contact-email" name="email" placeholder="e.g. grace@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-phone">Phone Number</label>
+                    <input type="tel" id="contact-phone" name="phone" placeholder="e.g. 082 123 4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-type">Type of Message</label>
+                    <select id="contact-type" name="type" required>
+                        <option value="" disabled selected>Select a category...</option>
+                        <option value="general">General Enquiry</option>
+                        <option value="packages">Package Information</option>
+                        <option value="delivery">Delivery Question</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-message">Your Message</label>
+                    <textarea id="contact-message" name="message" placeholder="How can we help you?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Message</button>
+
+            </form>
+        </div>
+
+    </div>
+
 </main>
 
 <footer>
-    <p>&copy; 2026 Orygin Harvest</p>
+    <p>&copy; 2026 Orygin Harvest. All rights reserved.</p>
 </footer>
 
 </body>

@@ -72,9 +72,27 @@ Final testing was completed and the project was submitted.
 Milestone: Part 3 submitted
 
 ## Changelog
-- Created HTML structure
-- Added navigation
-- Added content
+### Part 2
+- Added external CSS stylesheet (`css/style.css`) and linked to all 5 HTML pages
+- Applied full brand colour palette using CSS custom properties
+- Implemented Google Fonts (Cinzel + Montserrat) across all pages
+- Built responsive grid layouts using CSS Grid and Flexbox
+- Added hamburger navigation menu for mobile screens
+- Styled all form elements on enquiry.html and contact.html
+- Added hover, focus and active states to all interactive elements
+- Implemented media queries for tablet (900px) and mobile (600px) breakpoints
+- Updated all page content with expanded premium copywriting
+- Added The Exotic Box and The Custom Box to products.html
+- Updated enquiry form to include new packages, delivery day and custom fruit selection field
+- Added customer testimonials section to index.html
+- Added Who We Serve section to about.html
+
+### Part 1
+- Created project folder and file structure
+- Built HTML structure for all 5 pages: index, about, products, enquiry, contact
+- Added navigation linking all pages together
+- Added basic content and images to all pages
+- Set up GitHub repository and made initial commit
 
 ## References
 - Freepik

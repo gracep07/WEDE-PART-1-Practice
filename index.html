@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orygin Harvest - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
     <h1>Orygin Harvest</h1>
-
-    <!-- NAVIGATION -->
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="enquiry.html">Enquiry</a></li>
@@ -23,53 +29,112 @@
     </nav>
 </header>
 
-<!-- MAIN CONTENT -->
 <main>
 
     <!-- HERO SECTION -->
-    <section>
-        <h2>Fresh Fruit Delivered To Your Door</h2>
-        <img src="img/heroimage.jpg" alt="Fresh fruit box" width="500"> 
-        <p>Enjoy fresh, high-quality fruits delivered weekly to your home.</p>
-    
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Your Weekly Ritual of Freshness, Delivered.</h2>
+            <p>Life is too short for second-rate fruit. Every week, Orygin Harvest handpicks and delivers only the finest, freshest fruit selections directly to your door — because you and your family deserve nothing less than exceptional.</p>
+            <div class="cta-buttons">
+                <a href="enquiry.html" class="btn-primary">Start Your Weekly Delivery</a>
+                <a href="products.html" class="btn-secondary">Explore Packages</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="img/heroimage.jpg" alt="A beautifully arranged Orygin Harvest premium fruit box ready for delivery">
+        </div>
     </section>
 
-    <!-- FEATURED PRODUCTS -->
+    <!-- WHY CHOOSE US -->
     <section>
-        <h2>Featured Packages</h2>
-
-        <article>
-            <h3>Premium healthy fruits</h3>
-            <img src="img/featureone.jpg" alt="Premium" width="300">
-            <p>Perfect for families.</p>
-        </article>
-
-        <article>
-            <h3>Family Fruit Box</h3>
-            <img src="img/featuretwo.jpg" alt="Family fruit box" width="300">
-            <p>Perfect for families.</p>
-        </article>
-
-        <article>
-            <h3>Healthy Starter Pack</h3>
-            <img src="img/featurethree.jpg" alt="Starter fruit pack" width="300">
-            <p>Great for individuals.</p>
-        </article>
-</div>
-
-        <!-- Buttons Section -->
-        <div>
-            <a href="enquiry.html">Order Now</a>
-            <a href="enquiry.html">Enquire</a>
+        <h2 class="section-title">Why Families Choose Orygin Harvest</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Handpicked Quality</h3>
+                <p>Every single fruit in your box is individually selected for ripeness, freshness, and flavour. We do not settle for average — and neither should you.</p>
+            </div>
+            <div class="value-card">
+                <h3>Delivered Every Week</h3>
+                <p>Your weekly delivery arrives like clockwork, ensuring your home is always stocked with fresh, healthy fruit without a single trip to the store.</p>
+            </div>
+            <div class="value-card">
+                <h3>Effortless Healthy Living</h3>
+                <p>When fresh fruit arrives at your door every week, healthy choices become effortless. Give your family the gift of convenience and nourishment.</p>
+            </div>
+            <div class="value-card">
+                <h3>Premium, Every Time</h3>
+                <p>From the moment you open your box to the last bite, Orygin Harvest guarantees a premium experience — beautifully presented and consistently exceptional.</p>
+            </div>
         </div>
+    </section>
 
+    <!-- FEATURED PACKAGES -->
+    <section>
+        <h2 class="section-title">Our Most Loved Packages</h2>
+        <div class="featured-grid">
+
+            <article class="card">
+                <img src="img/featureone.jpg" alt="The Harvest premium exotic fruit selection">
+                <div class="card-body">
+                    <h3>The Harvest</h3>
+                    <p>Our most indulgent box — rare, seasonal, and exotic fruits for those who appreciate the extraordinary.</p>
+                    <a href="products.html" class="btn-primary">View Package</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="img/featuretwo.jpg" alt="The Gathering family fruit box">
+                <div class="card-body">
+                    <h3>The Gathering</h3>
+                    <p>Designed for families who love variety. A generous weekly selection that keeps everyone happy and healthy.</p>
+                    <a href="products.html" class="btn-primary">View Package</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="img/featurethree.jpg" alt="The Duo starter fruit pack">
+                <div class="card-body">
+                    <h3>The Duo</h3>
+                    <p>The perfect weekly starter — five beautifully chosen fruits for individuals or couples who value quality over quantity.</p>
+                    <a href="products.html" class="btn-primary">View Package</a>
+                </div>
+            </article>
+
+        </div>
+        <div class="cta-buttons" style="justify-content: center;">
+            <a href="products.html" class="btn-primary">View All Packages</a>
+            <a href="enquiry.html" class="btn-secondary">Get a Custom Quote</a>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <p>"Orygin Harvest has completely changed how our family eats. Fresh fruit every week, zero effort. We will never go back to supermarket shopping."</p>
+                <h3 style="margin-top: 1rem;">— Nomsa T., Cape Town</h3>
+            </div>
+            <div class="value-card">
+                <p>"The quality is genuinely outstanding. Every box feels like it was curated just for us. The Harvest box is absolutely worth every cent."</p>
+                <h3 style="margin-top: 1rem;">— David M., Johannesburg</h3>
+            </div>
+            <div class="value-card">
+                <p>"I ordered The Gathering for my family and the kids actually get excited on delivery day. That says everything about the quality."</p>
+                <h3 style="margin-top: 1rem;">— Zanele K., Cape Town</h3>
+            </div>
+            <div class="value-card">
+                <p>"The custom box is a game changer. I choose exactly what I want and it arrives perfectly fresh every single week. Absolutely brilliant."</p>
+                <h3 style="margin-top: 1rem;">— Riyaad A., Johannesburg</h3>
+            </div>
+        </div>
     </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer>
-    <p>&copy; 2026 Orygin Harvest</p>
+    <p>&copy; 2026 Orygin Harvest. All rights reserved.</p>
 </footer>
 
 </body>
