@@ -94,6 +94,17 @@ Milestone: Part 3 submitted
 - Added basic content and images to all pages
 - Set up GitHub repository and made initial commit
 
+## Screenshots
+
+### Desktop
+![Desktop view](screenshots/desktop.png)
+
+### Tablet
+![Tablet view](screenshots/tablet.png)
+
+### Mobile
+![Mobile view](screenshots/mobile.png)
+
 ## References
 - Freepik
 - Google Fonts
