@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Orygin Harvest</title>
+    <meta name="description" content="Get in touch with Orygin Harvest. Contact details, operating hours, delivery areas, and a message form to reach our team directly.">
+    <meta name="keywords" content="contact Orygin Harvest, fruit delivery contact, customer support, delivery areas Cape Town Johannesburg">
+    <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/part3.css">
+    <!-- Leaflet (free, no API key) for the interactive delivery map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 
@@ -76,7 +82,10 @@
             <h2>Send a Message</h2>
             <p style="margin-bottom: 1.5rem; color: var(--text-mid);">Whether you have a question about our packages, need help choosing the right box, or simply want to say hello — we would love to hear from you.</p>
 
-            <form action="mailto:info@oryginharvest.co.za" method="post" enctype="text/plain">
+            <!-- Part 3: id added for js/main.js to hook into. novalidate
+                 lets our own validation messages show first; once valid,
+                 the form still submits via the mailto action below. -->
+            <form id="contact-form" action="mailto:info@oryginharvest.co.za" method="post" enctype="text/plain" novalidate>
 
                 <div class="form-group">
                     <label for="contact-name">Full Name</label>
@@ -112,10 +121,19 @@
 
                 <button type="submit" class="btn-submit">Send Message</button>
 
+                <!-- Part 3: shown once validation passes, just before the mailto action opens the visitor's email client -->
+                <p class="submit-note" id="contact-response"></p>
+
             </form>
         </div>
 
     </div>
+
+    <!-- INTERACTIVE DELIVERY MAP (Part 3) -->
+    <section>
+        <h2 class="section-title">Our Delivery Areas</h2>
+        <div id="delivery-map"></div>
+    </section>
 
 </main>
 
@@ -123,5 +141,8 @@
     <p>&copy; 2026 Orygin Harvest. All rights reserved.</p>
 </footer>
 
+<!-- Leaflet JS (free, no API key) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

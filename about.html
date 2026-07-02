@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Orygin Harvest</title>
+    <meta name="description" content="Learn the story behind Orygin Harvest — our mission, vision, and commitment to delivering premium, handpicked fresh fruit to families every week.">
+    <meta name="keywords" content="about Orygin Harvest, fruit delivery company, fresh fruit mission, our story, South Africa fruit delivery">
+    <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/part3.css">
 </head>
 <body>
 
@@ -95,11 +99,44 @@
         </div>
     </section>
 
+    <!-- GALLERY (Part 3: interactive gallery with lightbox) -->
+    <section>
+        <h2 class="section-title">A Look Inside Orygin Harvest</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="img/delivering.jpg" alt="An Orygin Harvest delivery arriving at a customer's door">
+            </div>
+            <div class="gallery-item">
+                <img src="img/featureone.jpg" alt="The Harvest premium exotic fruit selection, beautifully arranged">
+            </div>
+            <div class="gallery-item">
+                <img src="img/featuretwo.jpg" alt="The Gathering family fruit box packed with variety">
+            </div>
+            <div class="gallery-item">
+                <img src="img/featurethree.jpg" alt="The Duo starter fruit pack for individuals and couples">
+            </div>
+            <div class="gallery-item">
+                <img src="img/theduo.jpg" alt="A close-up of The Duo weekly fruit box">
+            </div>
+            <div class="gallery-item">
+                <img src="img/thegathering.jpg" alt="A close-up of The Gathering weekly fruit box">
+            </div>
+        </div>
+    </section>
+
 </main>
+
+<!-- Lightbox overlay (Part 3) -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close gallery image">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
 
 <footer>
     <p>&copy; 2026 Orygin Harvest. All rights reserved.</p>
 </footer>
 
+<script src="js/main.js" defer></script>
 </body>
 </html>

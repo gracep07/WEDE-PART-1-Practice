@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquiry - Orygin Harvest</title>
+    <meta name="description" content="Start your weekly Orygin Harvest fruit delivery. Submit an enquiry with your details, chosen package, and preferred delivery day.">
+    <meta name="keywords" content="fruit delivery enquiry, order fruit box, weekly fruit delivery signup, Orygin Harvest enquiry">
+    <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/part3.css">
 </head>
 <body>
 
@@ -37,7 +41,10 @@
     </div>
 
     <div class="form-wrapper">
-        <form action="#" method="post">
+        <!-- Part 3: id added so js/main.js can hook into this form.
+             novalidate lets our own validation messages show instead
+             of the browser's default ones. -->
+        <form id="enquiry-form" novalidate>
 
             <div class="form-group">
                 <label for="enquiry-name">Full Name</label>
@@ -97,6 +104,9 @@
             <button type="submit" class="btn-submit">Submit Enquiry</button>
 
         </form>
+
+        <!-- Part 3: dynamic response, filled in by js/main.js after successful validation -->
+        <div class="form-response" id="enquiry-response"></div>
     </div>
 
 </main>
@@ -105,5 +115,6 @@
     <p>&copy; 2026 Orygin Harvest. All rights reserved.</p>
 </footer>
 
+<script src="js/main.js" defer></script>
 </body>
 </html>

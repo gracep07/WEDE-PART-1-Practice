@@ -1,0 +1,265 @@
+/* ============================================================
+   ORYGIN HARVEST — part3.css
+   Part 3: Additional styles for JavaScript-driven features.
+   Linked AFTER style.css, so it inherits every variable defined
+   there (colours, spacing, radius, shadows, fonts). Kept in its
+   own file so Part 2's stylesheet is left completely untouched.
+   Breakpoints match style.css (900px tablet / 600px mobile).
+   ============================================================ */
+
+/* ─── PRODUCT FILTER BAR (products.html) ─────────────────── */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+}
+
+.filter-btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--green);
+    border-radius: 20px;
+    background-color: transparent;
+    color: var(--green);
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.filter-btn:hover {
+    background-color: var(--green);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    color: var(--white);
+}
+
+/* ─── FAQ ACCORDION (products.html) ───────────────────────── */
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid rgba(31,111,95,0.15);
+}
+
+.accordion-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--green-dark);
+    padding: var(--space-sm) 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.accordion-question::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: var(--orange);
+    flex-shrink: 0;
+}
+
+.accordion-item.open .accordion-question::after {
+    content: '\2212'; /* minus sign */
+}
+
+.accordion-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition);
+}
+
+.accordion-item.open .accordion-answer {
+    max-height: 300px;
+    padding-bottom: var(--space-sm);
+}
+
+.accordion-answer p {
+    font-size: 0.92rem;
+    color: var(--text-mid);
+}
+
+/* ─── GALLERY + LIGHTBOX (about.html) ─────────────────────── */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(15,61,50,0.92); /* var(--green-dark) with opacity */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+    padding: var(--space-md);
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 75vh;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+.lightbox-caption {
+    color: var(--beige);
+    font-family: var(--font-body);
+    margin-top: var(--space-sm);
+    text-align: center;
+    max-width: 60ch;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: none;
+    border: none;
+    color: var(--beige);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    color: var(--orange);
+}
+
+/* ─── DELIVERY MAP (contact.html) ─────────────────────────── */
+#delivery-map {
+    width: 100%;
+    height: 320px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    margin-top: var(--space-md);
+}
+
+/* Leaflet popups styled to match the brand */
+.leaflet-popup-content-wrapper {
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+}
+
+.leaflet-popup-content strong {
+    color: var(--green-dark);
+    font-family: var(--font-heading);
+}
+
+/* ─── FORM VALIDATION STATES (enquiry.html / contact.html) ── */
+.input-error {
+    border-color: #c0392b !important;
+    box-shadow: 0 0 0 3px rgba(192,57,43,0.12) !important;
+}
+
+.field-error {
+    color: #c0392b;
+    font-size: 0.8rem;
+    margin-top: -0.2rem;
+}
+
+/* ─── ENQUIRY DYNAMIC RESPONSE ────────────────────────────── */
+.form-response {
+    display: none;
+    background-color: var(--white);
+    border-left: 4px solid var(--green);
+    border-radius: var(--radius-sm);
+    padding: var(--space-md);
+    margin-top: var(--space-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.form-response.show {
+    display: block;
+}
+
+.form-response h3 {
+    color: var(--green-dark);
+    margin-bottom: var(--space-xs);
+}
+
+.form-response p {
+    font-size: 0.92rem;
+    max-width: unset;
+}
+
+/* ─── CONTACT FORM SUBMIT NOTE ────────────────────────────── */
+.submit-note {
+    display: none;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: var(--space-xs);
+    text-align: center;
+}
+
+.submit-note.show {
+    display: block;
+}
+
+/* ─── RESPONSIVE — TABLET (max-width: 900px) ──────────────── */
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ─── RESPONSIVE — MOBILE (max-width: 600px) ──────────────── */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-bar {
+        gap: 0.4rem;
+    }
+
+    .filter-btn {
+        font-size: 0.78rem;
+        padding: 0.5rem 0.9rem;
+    }
+
+    #delivery-map {
+        height: 240px;
+    }
+}

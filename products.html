@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - Orygin Harvest</title>
+    <meta name="description" content="Browse Orygin Harvest's weekly fruit boxes — The Duo, The Gathering, The Harvest, The Exotic Box and The Custom Box. Fresh, handpicked fruit delivered every week.">
+    <meta name="keywords" content="fruit boxes, fruit packages, weekly fruit box, custom fruit box, exotic fruit box, fruit subscription South Africa">
+    <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/part3.css">
 </head>
 <body>
 
@@ -37,10 +41,20 @@
     </div>
 
     <section>
+        <!-- Part 3: dynamic product filter -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All Packages</button>
+            <button class="filter-btn" data-filter="starter">Starter</button>
+            <button class="filter-btn" data-filter="popular">Most Popular</button>
+            <button class="filter-btn" data-filter="premium">Premium</button>
+            <button class="filter-btn" data-filter="exclusive">Exclusive</button>
+            <button class="filter-btn" data-filter="custom">Build Your Own</button>
+        </div>
+
         <div class="products-grid">
 
             <!-- THE DUO -->
-            <article class="card">
+            <article class="card" data-category="starter">
                 <img src="img/theduo.jpg" alt="The Duo — a premium weekly fruit box for individuals and couples">
                 <div class="card-body">
                     <span class="product-badge">Starter</span>
@@ -54,7 +68,7 @@
             </article>
 
             <!-- THE GATHERING -->
-            <article class="card">
+            <article class="card" data-category="popular">
                 <img src="img/thegathering.jpg" alt="The Gathering — a generous weekly family fruit box">
                 <div class="card-body">
                     <span class="product-badge">Most Popular</span>
@@ -69,7 +83,7 @@
             </article>
 
             <!-- THE HARVEST -->
-            <article class="card">
+            <article class="card" data-category="premium">
                 <img src="img/theharvest.jpg" alt="The Harvest — premium exotic and seasonal weekly fruit box">
                 <div class="card-body">
                     <span class="product-badge">Premium</span>
@@ -84,7 +98,7 @@
             </article>
 
             <!-- THE EXOTIC BOX -->
-            <article class="card">
+            <article class="card" data-category="exclusive">
                 <img src="img/theharvest.jpg" alt="The Exotic Box — rare and extraordinary fruits delivered weekly">
                 <div class="card-body">
                     <span class="product-badge" style="background-color: var(--orange);">Exclusive</span>
@@ -99,7 +113,7 @@
             </article>
 
             <!-- THE CUSTOM BOX -->
-            <article class="card">
+            <article class="card" data-category="custom">
                 <img src="img/featureone.jpg" alt="The Custom Box — build your own weekly fruit selection">
                 <div class="card-body">
                     <span class="product-badge" style="background-color: var(--orange);">Build Your Own</span>
@@ -125,11 +139,48 @@
         </div>
     </section>
 
+    <!-- FAQ ACCORDION (Part 3) -->
+    <section>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="accordion">
+
+            <div class="accordion-item">
+                <button class="accordion-question">How does the weekly delivery work?</button>
+                <div class="accordion-answer">
+                    <p>Once your enquiry is confirmed, you will be assigned a fixed delivery day each week. Your box is picked, packed, and delivered fresh on that same day, every week, without you needing to place a new order.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-question">Can I change or pause my package?</button>
+                <div class="accordion-answer">
+                    <p>Yes. You can switch packages, update your Custom Box fruit selection, or pause your delivery at any time by contacting our team through the Contact page.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-question">Which areas do you deliver to?</button>
+                <div class="accordion-answer">
+                    <p>We currently deliver weekly across the greater Cape Town and Johannesburg areas. See the interactive map on our Contact page for more detail.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-question">How is pricing determined for the Exotic and Custom boxes?</button>
+                <div class="accordion-answer">
+                    <p>Because these boxes depend on rare or personally chosen fruit, pricing is confirmed individually once you submit an enquiry, based on current availability and your selection.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 </main>
 
 <footer>
     <p>&copy; 2026 Orygin Harvest. All rights reserved.</p>
 </footer>
 
+<script src="js/main.js" defer></script>
 </body>
 </html>

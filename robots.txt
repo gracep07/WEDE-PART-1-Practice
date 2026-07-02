@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gracep07.github.io/WEDE-PART-1-Practice/sitemap.xml
