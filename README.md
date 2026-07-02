@@ -72,6 +72,26 @@ Final testing was completed and the project was submitted.
 Milestone: Part 3 submitted
 
 ## Changelog
+### Part 3
+- Added `js/main.js` with product filtering, FAQ accordion, gallery
+  lightbox, interactive map, and form validation/processing
+- Added `css/part3.css` for styling all new Part 3 components
+- Added category filter buttons and `data-category` attributes to
+  `products.html`
+- Added FAQ accordion section to `products.html`
+- Added photo gallery with lightbox to `about.html`
+- Added interactive Leaflet delivery-area map to `contact.html`
+- Added JavaScript validation and a dynamic response summary to the
+  enquiry form
+- Added JavaScript validation to the contact form before mailto submission
+- Added meta description, meta keywords, and robots meta tag to all 5
+  pages
+- Added `robots.txt` and `sitemap.xml`
+- Compressed and resized all images in `img/` (originals were up to
+  21MB each; optimised versions are under 300KB) to improve page
+  load speed
+- Deployed website via GitHub Pages
+
 ### Part 2
 - Added external CSS stylesheet (`css/style.css`) and linked to all 5 HTML pages
 - Applied full brand colour palette using CSS custom properties
@@ -109,3 +129,5 @@ Milestone: Part 3 submitted
 - Freepik
 - Google Fonts
 - Colour Hunt
+- Leaflet.js — https://leafletjs.com/
+- OpenStreetMap contributors — https://www.openstreetmap.org/copyright
